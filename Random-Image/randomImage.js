@@ -51,8 +51,12 @@ class RandomImage extends HTMLElement{
     //Method - Assign the randomly selected image to the img tag 
     displayRandomImage(randomizedImage) {
         this.shadowRoot.querySelector('img').src = randomizedImage.src;
-        this.shadowRoot.querySelector('img').alt = randomizedImage.alt;
-        this.shadowRoot.querySelector('img').title = randomizedImage.alt;
+        let altText = randomizedImage.alt;
+        if(altText == ''){ //Need to see if user supplied alt text (as they should have for accessibility). If not, need to add default alt text.
+            altText = 'Randomized Image'
+        }
+        this.shadowRoot.querySelector('img').alt = altText;
+        this.shadowRoot.querySelector('img').title = altText;
     }
 }
 
