@@ -9,7 +9,6 @@ template.innerHTML = `
         max-height: 100%;
         max-width: 100%;
     }
-
     @media only screen and (max-width: 500px) {
         .randomImage{
             height: auto !important;
@@ -64,5 +63,3 @@ class RandomImage extends HTMLElement{
 if (document.querySelectorAll('random-image').length > 0) { 
     window.customElements.define('random-image', RandomImage);
 }
-
-
