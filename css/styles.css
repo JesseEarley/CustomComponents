@@ -1,0 +1,13 @@
+html{
+    font-size: 10px;
+}
+body{
+    font-size: 1.8rem;
+}
+code{
+    background: #000;
+    color: #FFF;
+    display: block;
+    font-size: 1.4rem;
+    padding: 1rem;
+}
