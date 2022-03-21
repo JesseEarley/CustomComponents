@@ -53,7 +53,7 @@ template.innerHTML = `
     </style>
 
     <div class="wrapper">
-        <video autoplay muted loop tabindex="-1">
+        <video autoplay playsinline muted loop tabindex="-1">
         <source src="" type="video/mp4">
         Your browser does not support HTML5 video.
         </video>
