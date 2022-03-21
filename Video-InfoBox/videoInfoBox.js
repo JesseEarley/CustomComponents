@@ -78,6 +78,7 @@ class VideoInfoBox extends HTMLElement{
         }
         this.setVideo(videoHeight, videoSource);
         this.getDescription();
+        this.shadowRoot.querySelector('video').play(); //need this for Safari;
     }
 
     //Method - Set video properties.
