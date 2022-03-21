@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+<body>
+    <h1>Video Info Box Component</h1>
+
+    <h2>Demo</h2>
+    <!-- <video-infobox> component
+        Available attributes:
+        height - specify height in px
+
+        Excluded attributes will default to the following:
+        height - 400px
+
+        Required elements:
+        <h2> - Heading for the infobox
+        <p> - Description that will appear below the heading
+
+        Optional elements:
+        <a> - URL will be used as for a button following the paragraph of text in the info box
+    -->   
+    <h3>With link</h3>
+    <video-infobox src="https://www.w3schools.com/howto/rain.mp4" height="500px">
+        <h2>Title</h2>
+        <p>Description of video or content.</p>
+        <a href="https://google.com"></a>
+    </video-infobox>
+
+    <h3>Without link</h3>
+    <video-infobox src="https://static.videezy.com/system/resources/previews/000/044/479/original/banana.mp4" height="400px">
+      <h2>Bananas</h2>
+      <p>Bananas are falling all around us. Look out!</p>
+    </video-infobox>
+
+    <h2>Available attributes:</h2>
+        <ul>
+            <li>height - specify height in px</li>
+        </ul>
+
+        <h3>Excluded attributes will default to the following:</h3>
+        <ul>
+            <li>height - 400px</li>
+        </ul>
+
+    <h2>Required Elements</h2>
+    <p>The &lt;video-inbox&gt; element must contain the following child elements: </p>
+    <ul>
+      <li>&lt;h2&gt; - This will be the heading for the info box. </li>
+      <li>&lt;p&gt; - This will be the paragraph of text that follows the heading. </li>
+    </ul>
+
+    <h2>Optional Elements</h2>
+    <p>The &lt;video-inbox&gt; element can contain the following optional child elements: </p>
+    <ul>
+      <li>&lt;a&gt; - The provided URL will be used as for a button following the paragraph of text in the info box.
+    </ul>
+
+    <h2>HTML</h2>
+    <code>
+      &lt;video-infobox src=&quot;https://www.w3schools.com/howto/rain.mp4&quot; height=&quot;500px&quot;&gt; <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Title&lt;/h2&gt; <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Description of video or content.&lt;/p&gt; <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href=&quot;https://google.com&quot;&gt;&lt;/a&gt; <br />
+      &lt;/video-infobox&gt;
+    </code>
+
+    <script src="videoInfoBox.js"></script>
+</body>
+</html>
