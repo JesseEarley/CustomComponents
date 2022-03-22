@@ -71,27 +71,27 @@ class VideoInfoBox extends HTMLElement{
 
         this.attachShadow({mode: 'open' });
         this.shadowRoot.appendChild(template.content.cloneNode(true));
-        const videoSource = this.getAttribute('src');
-        let videoHeight = this.getAttribute('height');
-        if(videoHeight == null){
-            videoHeight = '400px'; //Need to set a default if one is not defined by the user
+        let videoURL = this.getAttribute('data-videoURL');
+        let height = this.getAttribute('data-height');
+        if(height == null){
+            height = '400px'; //Need to set a default if one is not defined by the user
         }
-        this.setVideo(videoHeight, videoSource);
+        this.setVideo(videoURL, height );
         this.getDescription();
         this.shadowRoot.querySelector('video').play(); //need this for Safari;
     }
 
     //Method - Set video properties.
-    setVideo(videoHeight, videoSource){
-        this.shadowRoot.querySelector('video').style.height = videoHeight;
-        this.shadowRoot.querySelector('source').src = videoSource;
+    setVideo(videoURL, height){
+        this.shadowRoot.querySelector('source').src = videoURL;
+        this.shadowRoot.querySelector('video').style.height = height;
     }
 
     getDescription(){
         //Check to see if user included a title
         let contentTitle = '';
-        if (this.getElementsByTagName('h2').length >= 1) {
-            contentTitle = this.getElementsByTagName('h2')[0].innerHTML; //If so, grab it.
+        if (this.getAttribute('data-title')) {
+            contentTitle = this.getAttribute('data-title'); //If so, grab it.
         }
         else{
             contentTitle = 'Heading'; //Need to set a default if one is not defined by the user
@@ -99,17 +99,17 @@ class VideoInfoBox extends HTMLElement{
 
         //Check to see if user included a title
         let contentDescription = '';
-        if (this.getElementsByTagName('p').length >= 1) {
-            contentDescription = this.getElementsByTagName('p')[0].innerHTML; //If so, grab it.
+        if (this.getAttribute('data-description')) {
+            contentDescription = this.getAttribute('data-description') //If so, grab it.
         }
         else{
-            contentDescription = 'Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.'; //Need to set a default if one is not defined by the user
+            contentDescription = 'Lorem ipsum dolor sit amet, an his etiam torquatos.'; //Need to set a default if one is not defined by the user
         }
 
         //Check to see if user included a link
         let contentLink = '';
-        if (this.getElementsByTagName('a').length >= 1){
-            contentLink = this.getElementsByTagName('a')[0].href; //If so, grab it.
+        if (this.getAttribute('data-linkURL')){
+            contentLink = this.getAttribute('data-linkURL'); //If so, grab it.
         }
         else{
             contentLink = false; //If not, let's set it to false
