@@ -126,6 +126,7 @@ class VideoInfoBox extends HTMLElement{
             let anchor = document.createElement('a');
             anchor.innerText = 'View More';
             anchor.setAttribute('href', contentLink);
+            anchor.setAttribute('title','View More');
             this.shadowRoot.querySelector('.description').appendChild(anchor);
         }
     }
