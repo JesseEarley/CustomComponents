@@ -14,19 +14,18 @@
     <h2>Demo</h2>
     <!-- <video-infobox> component
         Available attributes:
-        height - specify height in px
+        data-videoURL - specify URL for video file
+        data-height - specify height in px
+        data-title - specify title that will appear as a heading
+        data-description - specify description that will appear below the heading
+        data-linkURL - specify URL to be used for button (OPTIONAL)
 
         Excluded attributes will default to the following:
-        height - 400px
-
-        Required elements:
-        <h2> - Heading for the infobox
-        <p> - Description that will appear below the heading
-
-        Optional elements:
-        <a> - URL will be used as for a button following the paragraph of text in the info box
+        data-height - 400px
+        data-title - 'Default Heading'
+        data-description - 'Lorem ipsum dolor sit amet, an his etiam torquatos.'
     -->   
-    <h3>With link</h3>
+    <h3>With link</h3>    
     <video-infobox 
       data-videoURL="https://www.w3schools.com/howto/rain.mp4" 
       data-height="500px"
