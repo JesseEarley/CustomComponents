@@ -14,7 +14,7 @@ template.innerHTML = `
             object-fit: cover;
             width: 100%;
         }
-                
+
         .description {
             background: rgba(0, 0, 0, 0.5);
             bottom: 0;
@@ -25,31 +25,37 @@ template.innerHTML = `
             position: absolute;
             width: 100%;
         }
+            h2{
+                margin: 0;
+            }
+            p{
+                margin: 1rem 0 2rem;
+            }
                 
-        a {
-            background: linear-gradient(to right,#fff 50%,rgba(24,69,59,0) 50%);
-            background-position: right bottom;
-            background-size: 200% 100%;
-            border: 2px solid #FFF;
-            color: #fff;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 10px;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: all .4s;
-            width: 200px;
-        }
+            a {
+                background: linear-gradient(to right,#fff 50%,rgba(24,69,59,0) 50%);
+                background-position: right bottom;
+                background-size: 200% 100%;
+                border: 2px solid #FFF;
+                color: #fff;
+                display: inline-block;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 10px;
+                text-decoration: none;
+                text-transform: uppercase;
+                transition: all .4s;
+            }
 
-        a:hover,
-        a:focus {
-            background-position: left bottom;
-            color: black;
-        }
+                a:hover,
+                a:focus {
+                    background-position: left bottom;
+                    color: black;
+                }
 
-        a:focus{
-            outline: 2px dotted #FFF;
-        }
+                a:focus{
+                    outline: 2px dotted #FFF;
+                }
     </style>
 
     <div class="wrapper">
