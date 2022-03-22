@@ -71,30 +71,33 @@ class VideoInfoBox extends HTMLElement{
 
         this.attachShadow({mode: 'open' });
         this.shadowRoot.appendChild(template.content.cloneNode(true));
+        this.setVideo( );
+        this.getInfoBoxContent();
+        if(navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
+            this.shadowRoot.querySelector('video').play(); //need this for Safari;
+          }
+    }
+
+    //Method - Get/Set video properties.
+    setVideo(){
         let videoURL = this.getAttribute('data-videoURL');
         let height = this.getAttribute('data-height');
         if(height == null){
             height = '400px'; //Need to set a default if one is not defined by the user
         }
-        this.setVideo(videoURL, height );
-        this.getDescription();
-        this.shadowRoot.querySelector('video').play(); //need this for Safari;
-    }
-
-    //Method - Set video properties.
-    setVideo(videoURL, height){
         this.shadowRoot.querySelector('source').src = videoURL;
         this.shadowRoot.querySelector('video').style.height = height;
     }
 
-    getDescription(){
+     //Method - Get the content for the infobox
+    getInfoBoxContent(){
         //Check to see if user included a title
         let contentTitle = '';
         if (this.getAttribute('data-title')) {
             contentTitle = this.getAttribute('data-title'); //If so, grab it.
         }
         else{
-            contentTitle = 'Heading'; //Need to set a default if one is not defined by the user
+            contentTitle = 'Default Heading'; //Need to set a default if one is not defined by the user
         }
 
         //Check to see if user included a title
@@ -115,11 +118,11 @@ class VideoInfoBox extends HTMLElement{
             contentLink = false; //If not, let's set it to false
         }
 
-        this.populateContent(contentTitle, contentDescription, contentLink);
+        this.setDescription(contentTitle, contentDescription, contentLink);
     }
 
     //Method - Populate the description box with title, paragraph and link (if applicable).
-    populateContent(contentTitle, contentDescription, contentLink){
+    setDescription(contentTitle, contentDescription, contentLink){
         this.shadowRoot.querySelector('h2').innerText = contentTitle;
         this.shadowRoot.querySelector('p').innerText = contentDescription;
         if(contentLink !== false){
