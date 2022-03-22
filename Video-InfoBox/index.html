@@ -44,34 +44,30 @@
 
     <h2>Available attributes:</h2>
         <ul>
-            <li>height - specify height in px</li>
+            <li>data-videoURL - specify URL for video file</li>  
+            <li>data-height - specify height in px</li>
+            <li>data-title - specify title that will appear as a heading</li>
+            <li>data-description - specify description that will appear below the heading</li>
+            <li>data-linkURL - specify URL to be used for button (OPTIONAL)</li>
         </ul>
 
         <h3>Excluded attributes will default to the following:</h3>
         <ul>
-            <li>height - 400px</li>
+            <li>data-height - 400px</li>
+            <li>data-title - 'Default Heading'</li>
+            <li>data-description - 'Lorem ipsum dolor sit amet, an his etiam torquatos.'</li>
         </ul>
-
-    <h2>Required Elements</h2>
-    <p>The &lt;video-inbox&gt; element must contain the following child elements: </p>
-    <ul>
-      <li>&lt;h2&gt; - This will be the heading for the info box. </li>
-      <li>&lt;p&gt; - This will be the paragraph of text that follows the heading. </li>
-    </ul>
-
-    <h2>Optional Elements</h2>
-    <p>The &lt;video-inbox&gt; element can contain the following optional child elements: </p>
-    <ul>
-      <li>&lt;a&gt; - The provided URL will be used as for a button following the paragraph of text in the info box.
-    </ul>
 
     <h2>HTML</h2>
     <code>
-      &lt;video-infobox src=&quot;https://www.w3schools.com/howto/rain.mp4&quot; height=&quot;500px&quot;&gt; <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Title&lt;/h2&gt; <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Description of video or content.&lt;/p&gt; <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href=&quot;https://google.com&quot;&gt;&lt;/a&gt; <br />
+      &lt;video-infobox <br/> 
+      &nbsp;&nbsp;&nbsp;&nbsp;data-videoURL=&quot;https://www.w3schools.com/howto/rain.mp4&quot; <br/> 
+      &nbsp;&nbsp;&nbsp;&nbsp;data-height=&quot;500px&quot; <br/> 
+      &nbsp;&nbsp;&nbsp;&nbsp;data-title=&quot;Title&quot; <br/> 
+      &nbsp;&nbsp;&nbsp;&nbsp;data-description=&quot;Description of video or content.&quot; <br/> 
+      &nbsp;&nbsp;&nbsp;&nbsp;data-linkURL=&quot;https://www.google.com&quot;&gt; <br/> 
       &lt;/video-infobox&gt;
+
     </code>
 
     <script src="videoInfoBox.js"></script>
