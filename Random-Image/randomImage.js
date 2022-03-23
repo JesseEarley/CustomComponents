@@ -26,8 +26,8 @@ class RandomImage extends HTMLElement{
 
         this.attachShadow({mode: 'open' });
         this.shadowRoot.appendChild(template.content.cloneNode(true));
-        let userDefinedHeight = this.getAttribute('height');
-        let userDefinedFloat = this.getAttribute('float');
+        let userDefinedHeight = this.getAttribute('data-height');
+        let userDefinedFloat = this.getAttribute('data-float');
         if(userDefinedHeight == null){
             userDefinedHeight = '400px'; //Need to set a default if one is not defined by the user
         }
