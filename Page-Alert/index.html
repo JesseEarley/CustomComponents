@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <h1>Page-Alert Component</h1>
+
+    <h2>Demo</h2>
+    See Above. Page-Alert Component will always be added as the first child in the body so that it appears above all other content. Alerts can stack as shown above.
+    <!-- <page-alert> component
+        Available attributes:
+        data-alertSeverity - options include: 'info', 'danger', 'warning', 'success'
+        data-alertHeading - specify the title to appear in the alert box
+        data-alertInfo - specify alert information that should follow the title
+        data-alertLink - specify URL to be used for button (OPTIONAL)
+
+        Excluded attributes will default to the following:
+        data-alertSeverity - info
+        data-alertHeading - 'Alert Heading'
+        data-alertInfo - 'Alert information should go here.'
+    -->   
+    <page-alert 
+        data-alertSeverity="warning" 
+        data-alertHeading='This is a Warning alert' 
+        data-alertInfo ="This alert has an associated link button"
+        data-alertLink="https://www.google.com">
+    </page-alert>
+    
+    <page-alert 
+        data-alertSeverity="danger" 
+        data-alertHeading='This is a Danger alert' 
+        data-alertInfo ="This alert has no associated link button.">
+    </page-alert>
+
+    <page-alert 
+        data-alertSeverity="info" 
+        data-alertHeading='This is an Information alert' 
+        data-alertInfo ="This alert has an associated link button"
+        data-alertLink="https://www.google.com">
+    </page-alert>
+
+    <page-alert 
+        data-alertSeverity="success" 
+        data-alertHeading='This is a Success alert' 
+        data-alertInfo ="This alert has no associated link button.">
+    </page-alert>
+
+    <h2>Available attributes:</h2>
+    <ul>
+       <li>data-alertSeverity - options include: 'info', 'danger', 'warning', 'success'</li>
+       <li>data-alertHeading - specify the title to appear in the alert box</li>
+       <li>data-alertInfo - specify alert information that should follow the title</li>
+       <li>data-alertLink - specify URL to be used for button (OPTIONAL)</li>
+    </ul>
+
+    <h3>Excluded attributes will default to the following:</h3>
+    <ul>
+        <li> data-alertSeverity - info</li>
+        <li>data-alertHeading - 'Alert Heading'</li>
+        <li>data-alertInfo - 'Alert information should go here.'</li>
+    </ul>
+
+<h2>HTML</h2>
+<code>
+    &lt;page-alert <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;data-alertSeverity=&quot;info&quot; <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;data-alertHeading=&#39;This is an Information alert&#39; <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;data-alertInfo =&quot;This alert has an associated link button&quot;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;data-alertLink=&quot;https://www.google.com&quot;&gt;<br />
+    &lt;/page-alert&gt;
+
+
+
+    <script src="pageAlert.js"></script>
+</body>
+</html>
