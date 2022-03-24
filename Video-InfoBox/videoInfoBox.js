@@ -3,6 +3,7 @@ template.innerHTML = `
     <style>
         .wrapper {
             display: grid;
+            font-family: inherit;
             grid-template-columns: repeat(6,1fr);
             margin: 1.6rem;
             position: relative;
