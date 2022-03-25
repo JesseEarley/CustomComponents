@@ -13,7 +13,7 @@ Download or clone the project and import the minified JS files into your own pro
 ### Page-Alert
 ### JS
 ```javascript
-<script src="pageAlert.min.js">pageAlert.min.js</script>
+<script src="pageAlert.min.js"></script>
 ```
 #### HTML
 ```html
