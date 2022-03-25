@@ -36,7 +36,7 @@ Download or clone the project and import the minified JS files into your own pro
     data-alertHeading - 'Alert Heading'
     data-alertInfo - 'Alert information should go here.'
 -->   
-````
+```
 
 ### Random-Image
 #### JS
@@ -54,6 +54,19 @@ Download or clone the project and import the minified JS files into your own pro
 </random-image>
 ```
 
+#### Available Attributes
+```html
+<!-- <random-image> component
+    Available attributes:
+    data-height - specify height in px
+    data-float - options: left, right, none
+
+    Excluded attributes will default to the following:
+    height - 400px
+    float - none
+-->    
+```
+
 ### Video-InfoBox
 #### JS
 ```javascript
@@ -68,4 +81,21 @@ Download or clone the project and import the minified JS files into your own pro
     data-description="Description of video or content." 
     data-linkURL="https://www.google.com">
 </video-infobox>
+```
+
+#### Available Attributes
+```html
+<!-- <video-infobox> component
+    Available attributes:
+    data-videoURL - specify URL for video file
+    data-height - specify height in px
+    data-title - specify title that will appear as a heading
+    data-description - specify description that will appear below the heading
+    data-linkURL - specify URL to be used for button (OPTIONAL)
+
+    Excluded attributes will default to the following:
+    data-height - 400px
+    data-title - 'Default Heading'
+    data-description - 'Lorem ipsum dolor sit amet, an his etiam torquatos.'
+-->   
 ```
