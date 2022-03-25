@@ -102,3 +102,6 @@ Download or clone the project and import the minified JS files into your own pro
     data-description - 'Lorem ipsum dolor sit amet, an his etiam torquatos.'
 -->   
 ```
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
