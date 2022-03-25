@@ -1,6 +1,6 @@
 # CustomComponents
 
-CustomComponents is my own personal custom web components library.
+CustomComponents is my own personal custom web components library. Development is ongoing...
 
 ## Demo
 [https://jesseearley.github.io/CustomComponents/](https://jesseearley.github.io/CustomComponents/)
