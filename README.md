@@ -22,8 +22,24 @@ Download or clone the project and import the minified JS files into your own pro
 </page-alert>
 ```
 
+#### Available Attributes
+```html
+<!-- <page-alert> component
+    Available attributes:
+    data-alertSeverity - options include: 'info', 'danger', 'warning', 'success'
+    data-alertHeading - specify the title to appear in the alert box
+    data-alertInfo - specify alert information that should follow the title
+    data-alertLink - specify URL to be used for button (OPTIONAL)
+
+    Excluded attributes will default to the following:
+    data-alertSeverity - info
+    data-alertHeading - 'Alert Heading'
+    data-alertInfo - 'Alert information should go here.'
+-->   
+````
+
 ### Random-Image
-### JS
+#### JS
 ```javascript
 <script src="randomImage.min.js"></script>
 ```
@@ -38,8 +54,8 @@ Download or clone the project and import the minified JS files into your own pro
 </random-image>
 ```
 
-### Vide-InfoBox
-### JS
+### Video-InfoBox
+#### JS
 ```javascript
 <script src="videoInfoBox.min.js"></script>
 ```
