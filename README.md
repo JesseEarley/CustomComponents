@@ -2,6 +2,9 @@
 
 CustomComponents is my own personal custom web components library.
 
+## Demo
+[https://jesseearley.github.io/CustomComponents/](https://jesseearley.github.io/CustomComponents/)
+
 ## Installation
 
 Download or clone the project and import the minified JS files into your own projects. 
