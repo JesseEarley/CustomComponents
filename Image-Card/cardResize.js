@@ -1,8 +1,8 @@
 function cardResize() {
-    if(document.body.clientWidth > '767'){
+    if(document.body.clientWidth > '1100'){
         document.querySelector('.card-container').setAttribute('style','display:grid; grid-template-columns: repeat(4,1fr);gap: 1.5rem;');
     }
-    if(document.body.clientWidth <= '767' && document.body.clientWidth >= '540' ){
+    if(document.body.clientWidth <= '1100' && document.body.clientWidth >= '540' ){
         document.querySelector('.card-container').setAttribute('style','display:grid; grid-template-columns: repeat(2,1fr);gap: 1.5rem;');
     }
     if(document.body.clientWidth < '540'){
