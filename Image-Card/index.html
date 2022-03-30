@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <h1>Image-Card Component</h1>
+
+    <h2>Description</h2>
+    <p>Image-Card Component provides an image wrapped inside of a card. Card contains heading and optional description and link. Additionally, a hover can also be set for the card. Cards must be contained within a wrapper container, which will display the cards in a default 4 column grid. The grid will resize to a 2 column grid and finally a 1 column grid as the screen size shrinks.</p>
+    <p>Image-Card Component requires a wrapper container and two JS files to work: one file for the component and one helper file for the wrapper - which will monitor screen size and adjust the wrapper styles accordingly (update this secondary file to change default styles for the grid).</p>
+    <h2>Demo</h2>
+    <!-- <page-alert> component
+        Available attributes:
+        data-cardHover - options include: 'True' (OPTIONAL)
+        data-cardImageURL - specify URL to be used for image
+        data-cardHeading - specify the heading to appear in the card
+        data-cardDescription - specify description that should follow the heading (OPTIONAL)
+        data-cardLink - specify URL to be used for button (OPTIONAL)
+
+        Excluded attributes will default to the following:
+        data-cardHeading  - 'Card Heading'
+    -->   
+
+    <div class="card-container">
+        <image-card 
+            data-cardHover="True"
+            data-cardImageURL="images/1.jpg" 
+            data-cardHeading="Card 1" 
+            data-cardDescription ="This is the card description"
+            data-cardLink="https://www.google.com">
+        </image-card>
+        <image-card 
+            data-cardImageURL="images/1.jpg" 
+            data-cardHeading="Card 2"> 
+        </image-card>
+        <image-card 
+            data-cardHover ="True"
+            data-cardImageURL="images/1.jpg" 
+            data-cardHeading="Card 3" 
+            data-cardDescription ="This is the card description">
+        </image-card>
+        <image-card 
+            data-cardImageURL="images/1.jpg" 
+            data-cardHeading="Card 4" 
+            data-cardLink="https://www.google.com">
+        </image-card>
+    </div>
+
+    <h2>Available attributes:</h2>
+    <ul>
+        <li>data-cardHover - options include: 'True' (OPTIONAL)</li>
+        <li>data-cardImageURL - specify URL to be used for image</li>
+        <li>data-cardHeading - specify the heading to appear in the card</li>
+        <li>data-cardDescription - specify description that should follow the heading (OPTIONAL)</li>
+        <li>data-cardLink - specify URL to be used for button (OPTIONAL)</li>
+    </ul>
+
+    <h3>Excluded attributes will default to the following:</h3>
+    <ul>
+        <li>data-cardHeading  - 'Card Heading'</li>
+    </ul>
+
+<h2>HTML</h2>
+<code>
+    &lt;div class=&quot;card-container&quot;&gt;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;image-card <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data-cardHover=&quot;True&quot; <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data-cardImageURL=&quot;images/1.jpg&quot; <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data-cardHeading=&quot;Card 1&quot; <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data-cardDescription =&quot;This is the card description&quot; <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data-cardLink=&quot;https://www.google.com&quot;&gt; <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/image-card&gt; <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- add as many cards as desired inside the container--&gt;<br />
+    &lt;/div&gt;<br/> <br/>
+
+    &lt;script src=&quot;imageCard.min.js&quot;&gt;&lt;/script&gt;<br/> 
+    &lt;script src=&quot;cardResize.min.js&quot;&gt;&lt;/script&gt;
+</code>
+
+<h2>Javascript</h2>
+<ul>
+    <li><a href="imageCard.js">imageCard.js</a></li>
+    <li><a href="imageCard.min.js">imageCard.min.js</a></li>
+    <li><a href="cardResize.js">cardResize.js</a></li>
+    <li><a href="cardResize.min.js">cardResize.min.js</a></li>
+</ul>
+
+    <script src="imageCard.min.js"></script>
+    <script src="cardResize.min.js"></script>
+</body>
+</html>
