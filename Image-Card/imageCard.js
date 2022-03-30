@@ -67,7 +67,6 @@ template.innerHTML = `
 class ImageCard extends HTMLElement{
     constructor(){
         super();
-        const clientWidth = '';
         this.attachShadow({mode: 'open' });
         this.shadowRoot.appendChild(template.content.cloneNode(true));
         this.getCardContent();
