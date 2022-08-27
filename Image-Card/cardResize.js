@@ -1,12 +1,12 @@
 function cardResize() {
     if(document.body.clientWidth > '1100'){
-        document.querySelector('.card-container').setAttribute('style','display:grid; grid-template-columns: repeat(4,1fr);gap: 1.5rem;');
+        document.querySelector('.card-container').setAttribute('style','display:grid; grid-template-columns: repeat(4,1fr);');
     }
     if(document.body.clientWidth <= '1100' && document.body.clientWidth >= '540' ){
-        document.querySelector('.card-container').setAttribute('style','display:grid; grid-template-columns: repeat(2,1fr);gap: 1.5rem;');
+        document.querySelector('.card-container').setAttribute('style','display:grid; grid-template-columns: repeat(2,1fr);');
     }
     if(document.body.clientWidth < '540'){
-        document.querySelector('.card-container').setAttribute('style','display:grid; grid-template-columns: repeat(1,1fr);gap: 1.5rem;');
+        document.querySelector('.card-container').setAttribute('style','display:grid; grid-template-columns: repeat(1,1fr);');
     }
   }
 
