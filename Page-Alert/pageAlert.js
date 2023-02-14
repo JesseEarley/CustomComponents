@@ -145,7 +145,7 @@ class PageAlert extends HTMLElement{
         else{
             alertLinkTextSize = '1rem';
         }
-        this.populateAlert(alertSeverity,alertHeading,alertInfo,alertLink,data-alertLinkTextSize); //call method to populate alert box
+        this.populateAlert(alertSeverity,alertHeading,alertInfo,alertLink,alertLinkTextSize); //call method to populate alert box
     }
     //Method - Populate alert box with user provided input or default values
     populateAlert(alertSeverity,alertHeading,alertInfo,alertLink){
