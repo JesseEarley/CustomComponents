@@ -113,6 +113,7 @@ class PageAlert extends HTMLElement{
         let alertHeading = '';
         let alertInfo = ''
         let alertLink = '';
+        let alertLinkTextSize = '';
 
         if (this.getAttribute('data-alertSeverity')){  //Check to see if user included severity
             alertSeverity = this.getAttribute('data-alertSeverity'); //If so, grab it...
