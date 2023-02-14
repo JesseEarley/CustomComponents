@@ -140,7 +140,7 @@ class PageAlert extends HTMLElement{
             alertLink = false; //...otherwise default to 'false'
         }
         if (this.getAttribute('data-alertLinkTextSize')){ //Check to see if user included a link text size
-            alertLinkTextSize ="font-size:" + this.getAttribute('data-alertLinkTextSize').toString(); //If so, grab it...
+            alertLinkTextSize ="font-size:" + this.getAttribute('data-alertLinkTextSize'); //If so, grab it...
         }
         else{
             alertLinkTextSize = '1rem';
@@ -148,7 +148,7 @@ class PageAlert extends HTMLElement{
         this.populateAlert(alertSeverity,alertHeading,alertInfo,alertLink,alertLinkTextSize); //call method to populate alert box
     }
     //Method - Populate alert box with user provided input or default values
-    populateAlert(alertSeverity,alertHeading,alertInfo,alertLink){
+    populateAlert(alertSeverity,alertHeading,alertInfo,alertLink,alertLinkTextSize){
         this.shadowRoot.querySelector('.page-alert').classList.add(alertSeverity);
         this.shadowRoot.querySelector('h2').innerText = alertHeading
         this.shadowRoot.querySelector('.alert-info').innerHTML = alertInfo
